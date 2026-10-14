@@ -1,0 +1,4 @@
+# Draft preview. Crawling is allowed so the noindex tag can be read.
+# Indexing is blocked in HTML (robots meta) and by the X-Robots-Tag header.
+User-agent: *
+Allow: /
