@@ -96,7 +96,7 @@ export function Layout() {
               {site.name}
             </p>
             <p className="footer-tagline" translate="no">
-              {site.tagline}
+              {site.description}
             </p>
           </div>
           <p className="footer-hosts" translate="no">

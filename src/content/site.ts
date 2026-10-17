@@ -1,9 +1,17 @@
 /**
- * The System's Shadow — draft content
+ * The Widow and the Whistleblower — draft content
  *
  * Edit this file when approved copy arrives. It is the only source of
- * on-site text. The show name, tagline, and host names below are approved
- * and must stay exact, including the apostrophe in "System's".
+ * on-site text. The show name, tagline, descriptive line, and host names
+ * below are approved and must stay exact.
+ *
+ * The tagline is only for the hero line, social and Open Graph
+ * descriptions, and the cover alt text. It is the only place the former
+ * title may appear, and the apostrophe there is curly. Do not use that
+ * former title as the show name.
+ *
+ * Cover paths live on `site.cover`. Replace the files named in the README
+ * when a cover is chosen.
  *
  * Replace each "[PLACEHOLDER - copy pending from Marketing]" field in
  * place. Do not add addresses, phone numbers, real email addresses,
@@ -54,9 +62,20 @@ export type Host = {
 };
 
 export const site = {
-  name: "The System's Shadow",
-  tagline:
+  name: "The Widow and the Whistleblower",
+  tagline: "The Widow and the Whistleblower: The System’s Shadow",
+  description:
     "Because every life in custody matters, and silence is not an option.",
+  cover: {
+    src: "/cover-1200.jpg",
+    srcSet: "/cover-600.jpg 600w, /cover-1200.jpg 1200w",
+    webpSrcSet: "/cover-600.webp 600w, /cover-1200.webp 1200w",
+    width: 1200,
+    height: 1200,
+    favicon: "/favicon-32.png",
+    appleTouchIcon: "/apple-touch-icon.png",
+    ogImage: "/cover-1200.jpg",
+  },
   contactEmail: "lilly@theinspiringwanderess.com",
   ui: {
     draft: "Draft preview",
