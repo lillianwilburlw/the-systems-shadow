@@ -48,7 +48,7 @@ requireText(html, showName, "show name in the document head");
 requireText(html, tagline, "social description");
 requireText(content, "Lilly Wilbur", "host");
 requireText(content, "Katie Kuhnhausen", "host");
-const approvedEmail = "lilly@theinspiringwanderess.com";
+const approvedEmail = "info@thewidowandthewhistleblower.com";
 requireText(content, approvedEmail, "contact email");
 requireText(html, 'content="noindex, nofollow, noarchive"', "robots meta");
 requireText(text, "Draft preview", "draft marker");

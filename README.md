@@ -18,7 +18,7 @@ Keep these exact:
 - `Lilly Wilbur`
 - `Katie Kuhnhausen`
 
-Replace each `[PLACEHOLDER - copy pending from Marketing]` field in place. The contact address is lilly@theinspiringwanderess.com. Source `url` values stay `[PLACEHOLDER - public URL pending verification]` until a link is verified. A source becomes a real link only when `url` is an absolute `https` URL.
+Replace each `[PLACEHOLDER - copy pending from Marketing]` field in place. The contact address is info@thewidowandthewhistleblower.com. Source `url` values stay `[PLACEHOLDER - public URL pending verification]` until a link is verified. A source becomes a real link only when `url` is an absolute `https` URL.
 
 Do not add addresses, phone numbers, other email addresses, attorney or law-firm names, case records, medical examiners, or the names of any deceased people.
 

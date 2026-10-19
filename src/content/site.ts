@@ -76,7 +76,7 @@ export const site = {
     appleTouchIcon: "/apple-touch-icon.png",
     ogImage: "/cover-1200.jpg",
   },
-  contactEmail: "lilly@theinspiringwanderess.com",
+  contactEmail: "info@thewidowandthewhistleblower.com",
   ui: {
     draft: "Draft preview",
     draftFooter: "Draft preview. Not for publication.",
