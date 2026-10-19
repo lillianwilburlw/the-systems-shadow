@@ -20,6 +20,9 @@ export function HomePage() {
         <p className="tagline" translate="no">
           {site.tagline}
         </p>
+        <p className="descriptive-line" translate="no">
+          {site.description}
+        </p>
         <p className="byline">
           <Link to="/about" translate="no">
             {site.hosts.map((host) => host.name).join(" and ")}

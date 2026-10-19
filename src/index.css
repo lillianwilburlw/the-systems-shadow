@@ -151,8 +151,10 @@ svg {
   font-family: var(--serif);
   font-size: clamp(1.02rem, 2.2vw, 1.35rem);
   letter-spacing: -0.02em;
+  line-height: 1.12;
   text-decoration: none;
-  white-space: nowrap;
+  text-wrap: balance;
+  min-width: 0;
 }
 
 .wordmark:hover {
@@ -235,13 +237,20 @@ svg {
 
 .tagline {
   margin: 1.4rem 0 0;
-  max-width: 16em;
+  max-width: 22em;
   font-family: var(--serif);
   font-style: italic;
   font-weight: 400;
   font-size: clamp(1.35rem, 2.4vw, 1.8rem);
   line-height: 1.35;
   color: var(--ink);
+}
+
+.descriptive-line {
+  margin: 1.15rem 0 0;
+  max-width: 36rem;
+  font-size: 1.125rem;
+  line-height: 1.5;
 }
 
 .byline {
@@ -744,11 +753,13 @@ figcaption {
 .footer-name {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 0.7rem;
   margin: 0;
   font-family: var(--serif);
-  font-size: 1.55rem;
+  font-size: clamp(1.25rem, 2.4vw, 1.55rem);
   letter-spacing: -0.02em;
+  line-height: 1.15;
 }
 
 .mark-small {

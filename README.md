@@ -1,8 +1,8 @@
-# The System's Shadow
+# The Widow and the Whistleblower
 
-Draft preview site for the podcast **The System's Shadow**, co-hosted by Lilly Wilbur and Katie Kuhnhausen.
+Draft preview site for the podcast **The Widow and the Whistleblower**, co-hosted by Lilly Wilbur and Katie Kuhnhausen.
 
-Tagline: Because every life in custody matters, and silence is not an option.
+Descriptive line on Home: Because every life in custody matters, and silence is not an option.
 
 This build is a placeholder for owner review. It is not published, it has no domain, and nothing on the contact page is sent anywhere. The show will eventually cover deaths in custody in the Washington State Department of Corrections. That subject is **not** written as public page copy yet.
 
@@ -12,16 +12,28 @@ All on-site text lives in [`src/content/site.ts`](src/content/site.ts).
 
 Keep these exact:
 
-- `The System's Shadow` (straight apostrophe)
-- `Because every life in custody matters, and silence is not an option.`
+- `The Widow and the Whistleblower` (show name: capital W on Widow and Whistleblower, lowercase "and" and "the", no subtitle)
+- `site.tagline` (hero line, social/OG description, and cover alt only). The apostrophe in that line is curly. The former title appears nowhere else and never as the show name.
+- `Because every life in custody matters, and silence is not an option.` (descriptive line on Home)
 - `Lilly Wilbur`
 - `Katie Kuhnhausen`
 
-Replace each `[PLACEHOLDER - copy pending from Marketing]` field in place. The contact address is lilly@theinspiringwanderess.com. Source `url` values stay `[PLACEHOLDER - public URL pending verification]` until a link is verified. A source becomes a real link only when `url` is an absolute `https` URL.
+Replace each `[PLACEHOLDER - copy pending from Marketing]` field in place. The contact address is info@thewidowandthewhistleblower.com. Source `url` values stay `[PLACEHOLDER - public URL pending verification]` until a link is verified. A source becomes a real link only when `url` is an absolute `https` URL.
 
 Do not add addresses, phone numbers, other email addresses, attorney or law-firm names, case records, medical examiners, or the names of any deceased people.
 
 `npm run check:copy` blocks emails, phone numbers, and stray URLs. It runs as part of `npm run build`.
+
+## Cover art
+
+The cover is not chosen. Home, the favicon, the apple touch icon, and the social image all use one placeholder. `site.cover` in [`src/content/site.ts`](src/content/site.ts) is the only path list. Replace these files in place when a cover is ready:
+
+- `public/cover-1200.jpg` (home image, `og:image`, and `twitter:image`)
+- `public/cover-600.jpg`
+- `public/cover-1200.webp`
+- `public/cover-600.webp`
+- `public/favicon-32.png`
+- `public/apple-touch-icon.png`
 
 ## Run locally
 

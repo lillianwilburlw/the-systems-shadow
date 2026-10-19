@@ -34,15 +34,21 @@ function requireText(haystack, needle, label) {
   }
 }
 
-requireText(content, "The System's Shadow", "show name");
-requireText(
-  content,
-  "Because every life in custody matters, and silence is not an option.",
-  "tagline",
-);
+const showName = "The Widow and the Whistleblower";
+const curlyApostrophe = "\u2019";
+const tagline = `${showName}: The System${curlyApostrophe}s Shadow`;
+const descriptiveLine =
+  "Because every life in custody matters, and silence is not an option.";
+const straightShowName = `The System${String.fromCharCode(39)}s Shadow`;
+
+requireText(content, showName, "show name");
+requireText(content, tagline, "tagline");
+requireText(content, descriptiveLine, "descriptive line");
+requireText(html, showName, "show name in the document head");
+requireText(html, tagline, "social description");
 requireText(content, "Lilly Wilbur", "host");
 requireText(content, "Katie Kuhnhausen", "host");
-const approvedEmail = "lilly@theinspiringwanderess.com";
+const approvedEmail = "info@thewidowandthewhistleblower.com";
 requireText(content, approvedEmail, "contact email");
 requireText(html, 'content="noindex, nofollow, noarchive"', "robots meta");
 requireText(text, "Draft preview", "draft marker");
@@ -105,8 +111,21 @@ for (const file of files) {
   });
 }
 
-if (content.includes("Systems Shadow") || content.includes("System’s")) {
-  failures.push('Show name must use a straight apostrophe: The System\'s Shadow.');
+const pkg = readFileSync(join(root, "package.json"), "utf8");
+requireText(pkg, '"name": "the-widow-and-the-whistleblower"', "package name");
+
+const retiredTitle = `System${curlyApostrophe}s Shadow`;
+for (const file of files) {
+  const source = readFileSync(file, "utf8");
+  const relative = file.replace(root, "");
+  if (source.includes(straightShowName) || source.includes("Systems Shadow")) {
+    failures.push(`${relative} uses the retired show name.`);
+  }
+  const retiredCount = source.split(retiredTitle).length - 1;
+  const taglineCount = source.split(tagline).length - 1;
+  if (retiredCount !== taglineCount) {
+    failures.push(`${relative} uses the former title outside the tagline.`);
+  }
 }
 
 if (failures.length > 0) {
