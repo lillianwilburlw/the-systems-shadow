@@ -1,17 +1,17 @@
 :root {
-  --paper: #f3eee4;
-  --ink: #1b1814;
-  --ink-soft: #3c362f;
-  --link: #5c3b24;
-  --line: #d5cbbd;
-  --night: #1e1b17;
-  --on-night: #f3eee4;
-  --on-night-soft: #e6dccb;
-  --bronze: #c6aa86;
-  --note: #efe4d2;
+  --paper: #14110e;
+  --ink: #f4efe6;
+  --ink-soft: #b7aa9a;
+  --link: #c4a574;
+  --line: #3a332c;
+  --night: #0e0c0a;
+  --on-night: #f4efe6;
+  --on-night-soft: #b7aa9a;
+  --bronze: #c4a574;
+  --note: #1c1916;
   --serif: "Newsreader", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
   --sans: "Source Sans 3", "Segoe UI", "Helvetica Neue", sans-serif;
-  color-scheme: light;
+  color-scheme: dark;
 }
 
 *,

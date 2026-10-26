@@ -4,7 +4,9 @@ Draft preview site for the podcast **The Widow and the Whistleblower**, co-hoste
 
 Descriptive line on Home: Because every life in custody matters, and silence is not an option.
 
-This build is a placeholder for owner review. It is not published, it has no domain, and nothing on the contact page is sent anywhere. The show will eventually cover deaths in custody in the Washington State Department of Corrections. That subject is **not** written as public page copy yet.
+This branch is the full-site preview. It is still marked draft and `noindex`. Alex Kuhnhausen is named because that file is already public. Four other names stay off the site. Episode titles on `main` that name additional people are not on this branch.
+
+The contact form is still disabled. Nothing on it is sent.
 
 ## Edit copy
 
@@ -18,9 +20,9 @@ Keep these exact:
 - `Lilly Wilbur`
 - `Katie Kuhnhausen`
 
-Replace each `[PLACEHOLDER - copy pending from Marketing]` field in place. The contact address is info@thewidowandthewhistleblower.com. Source `url` values stay `[PLACEHOLDER - public URL pending verification]` until a link is verified. A source becomes a real link only when `url` is an absolute `https` URL.
+Replace copy in [`src/content/site.ts`](src/content/site.ts). The contact address is info@thewidowandthewhistleblower.com. A source becomes a real link only when `url` is an absolute `https` URL.
 
-Do not add addresses, phone numbers, other email addresses, attorney or law-firm names, case records, medical examiners, or the names of any deceased people.
+Do not add street addresses, phone numbers, other email addresses, or the names of counsel.
 
 `npm run check:copy` blocks emails, phone numbers, and stray URLs. It runs as part of `npm run build`.
 

@@ -53,9 +53,9 @@ requireText(content, approvedEmail, "contact email");
 requireText(html, 'content="noindex, nofollow, noarchive"', "robots meta");
 requireText(text, "Draft preview", "draft marker");
 
-const placeholderCount = content.split("[PLACEHOLDER - copy pending from Marketing]").length - 1;
-if (placeholderCount < 15) {
-  failures.push(`Expected many placeholder copy markers, found ${placeholderCount}.`);
+const placeholderMarker = "[PLACEHOLDER - copy pending from Marketing]";
+if (text.includes(placeholderMarker)) {
+  failures.push("Placeholder copy is still in the site.");
 }
 
 const banned = [
@@ -136,6 +136,4 @@ if (failures.length > 0) {
   process.exit(1);
 }
 
-console.log(
-  `Draft copy check passed (${placeholderCount} placeholder fields, ${files.length} files scanned).`,
-);
+console.log(`Draft copy check passed (${files.length} files scanned).`);

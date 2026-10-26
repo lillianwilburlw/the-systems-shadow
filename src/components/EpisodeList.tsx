@@ -20,7 +20,7 @@ export function EpisodeList({ episodes, titleLevel }: EpisodeListProps) {
           <Link className="episode-link" to={`/episodes/${episode.slug}`}>
             <span className="episode-number">{episode.number}</span>
             <span className="episode-body">
-              <span className="kicker">{site.ui.placeholderEntry}</span>
+              <span className="kicker">{episode.status}</span>
               <Title className="episode-title">{episode.title}</Title>
               <span className="episode-meta">
                 <span>
@@ -30,9 +30,7 @@ export function EpisodeList({ episodes, titleLevel }: EpisodeListProps) {
                   <span className="meta-label">{site.ui.lengthLabel}</span> {episode.duration}
                 </span>
               </span>
-              {episode.slug === "episode-01" ? (
-                <span className="episode-description">{episode.summary}</span>
-              ) : null}
+              <span className="episode-description">{episode.summary}</span>
             </span>
             <span className="episode-go">{site.ui.showNotes}</span>
           </Link>
