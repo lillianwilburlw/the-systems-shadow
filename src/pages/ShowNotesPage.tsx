@@ -10,7 +10,7 @@ export function ShowNotesPage() {
   usePageTitle(episode ? episode.title : "Not found");
 
   useEffect(() => {
-    if (episode?.slug !== "episode-01") {
+    if (episode?.slug !== "the-doorway") {
       return;
     }
     const meta = document.querySelector('meta[name="description"]');
@@ -43,7 +43,7 @@ export function ShowNotesPage() {
         <p className="kicker">
           Episode {episode.number}
           <span aria-hidden="true"> · </span>
-          {site.ui.placeholderEntry}
+          {episode.status}
         </p>
         <h1>{episode.title}</h1>
         <dl className="meta">
